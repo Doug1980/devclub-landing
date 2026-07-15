@@ -1,8 +1,19 @@
+export type Trilha = 'programacao' | 'ia' | 'dados'
+
 export interface Formacao {
   readonly slug: string
   readonly nome: string
   readonly descricao: string
-  readonly trilha: 'programacao' | 'ia' | 'dados'
+  readonly trilha: Trilha
+}
+
+export const tituloFormacoes =
+  'Formações Completas para Aprender tudo do ZERO ao Avançado'
+
+export const rotulosTrilha: Record<Trilha, string> = {
+  programacao: 'Programação',
+  ia: 'IA',
+  dados: 'Dados',
 }
 
 export const formacoes: readonly Formacao[] = [
