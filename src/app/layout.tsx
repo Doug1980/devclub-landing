@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+import { SmoothScroll } from '@/components/layout/SmoothScroll'
+import { Header } from '@/components/layout/Header'
+import { menu } from '@/content/menu'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -12,7 +15,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR">
-      <body className="bg-background text-foreground antialiased">{children}</body>
+      <body className="bg-background text-foreground antialiased">
+        <SmoothScroll>
+          <Header conteudo={menu} />
+          {children}
+        </SmoothScroll>
+      </body>
     </html>
   )
 }
