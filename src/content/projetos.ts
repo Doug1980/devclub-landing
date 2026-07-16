@@ -1,3 +1,5 @@
+export const tituloProjetos = 'Tudo com Projetos Práticos e Reais'
+
 export interface Projeto {
   readonly slug: string
   readonly nome: string

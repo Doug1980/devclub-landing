@@ -17,12 +17,16 @@ export function Counter({
   duracaoMs = 1400,
 }: CounterProps) {
   const ref = useRef<HTMLSpanElement>(null)
-  const visivel = useInView(ref, { once: true, margin: '-10% 0px' })
+  const visivel = useInView(ref, { once: false, margin: '-10% 0px' })
   const reduzido = useReducedMotion()
 
   useEffect(() => {
     const alvo = ref.current
-    if (!visivel || !alvo) return
+    if (!alvo) return
+    if (!visivel) {
+      alvo.textContent = `${prefixo}0${sufixo}`
+      return
+    }
     if (reduzido) {
       alvo.textContent = `${prefixo}${ate}${sufixo}`
       return

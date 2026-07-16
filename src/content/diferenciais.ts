@@ -1,3 +1,6 @@
+export const tituloDiferenciais =
+  'Tudo que você precisa ALÉM do Código para Evoluir mais rápido'
+
 export interface Diferencial {
   readonly slug: string
   readonly titulo: string

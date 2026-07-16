@@ -1,3 +1,6 @@
+export const tituloPlataforma =
+  'Você terá acesso a uma plataforma moderna de aulas'
+
 export interface ItemPlataforma {
   readonly slug: string
   readonly titulo: string

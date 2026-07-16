@@ -15,7 +15,7 @@ export function RevealText({ texto, className }: RevealTextProps) {
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: '-15% 0px' }}
+      viewport={{ once: false, margin: '-15% 0px' }}
       transition={{ staggerChildren: 0.04 }}
       aria-label={texto}
     >
@@ -36,7 +36,7 @@ export function RevealText({ texto, className }: RevealTextProps) {
             }}
           >
             {palavra}
-            {i < palavras.length - 1 ? ' ' : ''}
+            {i < palavras.length - 1 ? ' ' : ''}
           </motion.span>
         </span>
       ))}

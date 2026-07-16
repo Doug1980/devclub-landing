@@ -20,7 +20,8 @@ export function Hero({ conteudo, empresas }: HeroProps) {
       <motion.div
         variants={container}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
         className="relative z-10 mx-auto flex w-full max-w-5xl flex-1 flex-col items-center justify-center gap-8 px-6 pt-24 text-center"
       >
         <motion.h1
